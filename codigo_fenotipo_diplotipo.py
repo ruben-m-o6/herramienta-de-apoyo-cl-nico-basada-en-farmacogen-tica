@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 1. Cargar el archivo CSV original
-df = pd.read_csv("Genotype Matrix.csv", sep=";")
+df = pd.read_csv("./CSV ENTRADA/Genotype Matrix.csv", sep=";")
 df.columns = [col.strip() for col in df.columns]
 
 # --- 2. FUNCIONES PARA EVALUAR CADA VARIANTE INDIVIDUALMENTE ---
@@ -144,7 +144,7 @@ columnas_finales = ['Sample/Assay', 'Diplotipo_CYP2D6', 'Fenotipo_CYP2D6',
                     'Diplotipo_UGT1A1', 'Fenotipo_UGT1A1']
 
 df_final = df[columnas_finales]
-df_final.to_csv("Matriz_Resultados_Completos.csv", index=False, sep=";")
+df_final.to_csv("./CSV SALIDA/Matriz_Resultados_Completos.csv", index=False, sep=";")
 
 print("¡Proceso exitoso! Se han calculado los Diplotipos y Fenotipos.")
 print(df_final.head())
